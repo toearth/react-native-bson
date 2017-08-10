@@ -2,7 +2,6 @@
 
 var writeIEEE754 = require('../float_parser').writeIEEE754,
 	readIEEE754 = require('../float_parser').readIEEE754,
-	f = require('util').format,
 	Long = require('../long').Long,
   Double = require('../double').Double,
   Timestamp = require('../timestamp').Timestamp,
