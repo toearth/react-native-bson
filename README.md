@@ -1,46 +1,34 @@
 # This is bson for react-native
 
+The method in [bson](https://github.com/mongodb/js-bson) dose not work for me. I got the way from the test code.
 
 If you don't yet know what BSON actually is, read [the spec](http://bsonspec.org).
 
 This package can be used to serialize JSON documents into the BSON format or the other way around. If you want to use it within the browser, give [browserify](https://github.com/substack/node-browserify) a try (it will help you add this package to your bundle). The current build is located in the `browser_build/bson.js` file.
 
-A simple example of how to use BSON in the browser:
-
-```html
-<script src="./browser_build/bson.js"></script>
-
-<script>
-  function start() {
-    var BSON = bson().BSON
-    var Long = bson().Long
-
-    var doc = { long: Long.fromNumber(100) }
-
-    // Serialize a document
-    var data = BSON.serialize(doc, false, true, false)
-    // De serialize it again
-    var doc_2 = BSON.deserialize(data)
-  }
-</script>
-```
-
-A simple example of how to use BSON in `node.js`:
+A simple example of how to use BSON in `react-native`:
 
 ```js
-var bson = require('bson')
-var BSON = new bson.BSONPure.BSON()
-var Long = bson.BSONPure.Long
 
-var doc = { long: Long.fromNumber(100) }
+import {BSON,Long, ObjectID,Binary,Code,DBRef,Symbol,Double,Timestamp,MaxKey,MinKey} from 'bson'
+import {Buffer} from 'buffer'
+
+var bson = new BSON([Long, ObjectID, Binary, Code, DBRef, Symbol, Double, Timestamp, MaxKey, MinKey])
+var user = {
+    username: 'username',
+    password: 'anymore'
+}
 
 // Serialize a document
-var data = BSON.serialize(doc, false, true, false)
+var data = bson.serialize(user, false, true, false)
 console.log('data:', data)
 
 // Deserialize the resulting Buffer
-var doc_2 = BSON.deserialize(data)
-console.log('doc_2:', doc_2)
+// response is return from server by library react-native-fetch-blob
+// the type of response.text() is base64
+// so far forgot other choices, only leave this code
+var userData = bson.deserialize(new Buffer(response.text(),'binary'))
+console.log('userData:', userData)
 ```
 
 ## API
