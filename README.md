@@ -37,7 +37,7 @@ The API consists of two simple methods to serialize/deserialize objects to/from 
 =======
 ## Installation
 
-`npm install bson`
+`npm i react-native-bson`
 
 ## API
 

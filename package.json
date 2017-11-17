@@ -1,5 +1,5 @@
 {
-  "name": "bson",
+  "name": "react-native-bson",
   "description": "A bson parser for node.js and the browser",
   "keywords": [
     "mongodb",
@@ -14,13 +14,13 @@
     "tools",
     "deserializer_bak.js"
   ],
-  "version": "0.4.23",
-  "author": "Christian Amor Kvalheim <christkv@gmail.com>",
+  "version": "0.0.2",
+  "author": "windhost <station20000@gmail.com>",
   "contributors": [],
-  "repository": "mongodb/js-bson",
+  "repository": "windhost/react-native-bson",
   "bugs": {
-    "mail": "node-mongodb-native@googlegroups.com",
-    "url": "https://github.com/mongodb/js-bson/issues"
+    "mail": "station20000@gmail.com",
+    "url": "https://github.com/windhost/react-native-bson/issues"
   },
   "dependencies": {
     "buffer": "^4.9.1"
