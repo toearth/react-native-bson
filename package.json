@@ -14,7 +14,7 @@
     "tools",
     "deserializer_bak.js"
   ],
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "windhost <station20000@gmail.com>",
   "contributors": [],
   "repository": "windhost/react-native-bson",
