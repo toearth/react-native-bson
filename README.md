@@ -1,4 +1,5 @@
-# This is bson for react-native [![npm version](https://badge.fury.io/js/react-native-bson.svg)]() [![npm](https://img.shields.io/npm/dy/react-native-bson.svg)]()
+[![npm version](https://badge.fury.io/js/react-native-bson.svg)]() [![npm](https://img.shields.io/npm/dy/react-native-bson.svg)]()
+# This is bson for react-native 
 
 The method in [bson](https://github.com/mongodb/js-bson) dose not work for me. I got the way from the test code.
 
